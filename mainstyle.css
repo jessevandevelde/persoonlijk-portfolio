@@ -1,9 +1,27 @@
 body {
-    background: #111;
-    width: 100%;
-    overflow: hidden;
-  }
- h1{
+  background: #111;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
   color: white;
   font-size: 50px;
- }
+}
+
+.about-me {
+  position: relative; 
+}
+
+.about-me img {
+  position: absolute; 
+  top: 0;           
+  right: 0;          
+  width: 50%;      
+  height: auto;     
+}
+
+.about-me p {
+  color: white;
+  margin-top: 100px; 
+}
