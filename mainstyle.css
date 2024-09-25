@@ -1,0 +1,9 @@
+body {
+    background: #111;
+    width: 100%;
+    overflow: hidden;
+  }
+ h1{
+  color: white;
+  font-size: 50px;
+ }

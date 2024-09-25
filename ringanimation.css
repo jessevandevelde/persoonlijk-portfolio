@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=SUSE:wght@100..800&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Permanent Marker", cursive;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #111;
+  width: 100%;
+  overflow: hidden;
+}
+.ring {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 2s ease-out; 
+  max-width: 100%;
+}
+
+.ring i {
+  position: absolute;
+  inset: 0;
+  border: 2px solid #fff;
+  transition: border 1s ease-out, filter 1s ease-out; 
+}
+.ring i:nth-child(1) {
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  animation: animate 6s linear infinite; 
+}
+.ring i:nth-child(2) {
+  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+  animation: animate 4s linear infinite; 
+}
+.ring i:nth-child(3) {
+  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+  animation: animate2 10s linear infinite; 
+}
+.ring:hover {
+  transform: scale(1.25);
+}
+.ring:hover i {
+  border: 6px solid var(--clr);
+  filter: drop-shadow(0 0 20px var(--clr));
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+.ring img {
+  position: center;
+  width: 100%; /* Make the image take the full width of the ring */
+  height: 100%; /* Make the image take the full height of the ring */
+  border-radius: 50%; /* Ensure the image fits the circular shape */
+  object-fit: cover; /* Maintain the aspect ratio and cover the entire space */
+  z-index: -1;
+}
+
+.homescreen h2 {
+  color: white;
+  position: fixed;
+  padding: 0;
+  left: 30px;
+  font-size: 40px;
+}
+.homescreen p {
+  color: white;
+  position: fixed;
+  padding: 0;
+  left: 30px;
+  font-size: 40px;
+}
+
+
